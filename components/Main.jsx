@@ -10,7 +10,7 @@ const Main = () => {
   const [location, setLocation] = useState([]);
   const [info, setInfo] = useState([]);
   useEffect(() => {
-    fetchData("Nagpur");
+    fetchData("Pune");
   }, []);
 
   useEffect(() => {
