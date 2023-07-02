@@ -34,4 +34,4 @@ npm run dev
 
 Open https://localhost:3000 in your browser.
 
-Congratulations! You have run the project successfully.
+🎉Congratulations! You have run the project successfully.
