@@ -3,6 +3,7 @@
 ### Live app link
 
 https://weatherly-by-js.netlify.app/
+or
 https://weatherly-ten.vercel.app/
 
 ### Description:
