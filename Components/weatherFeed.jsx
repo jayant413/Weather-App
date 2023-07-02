@@ -41,8 +41,8 @@ const WeatherFeed = ({ condition, info }) => {
           <ul className="flex">
             {weatherLogos.map((l, i) => {
               return (
-                <li className="mr-4 text-xl">
-                  <l.logo key={i} />
+                <li className="mr-4 text-xl" key={i}>
+                  <l.logo />
                 </li>
               );
             })}

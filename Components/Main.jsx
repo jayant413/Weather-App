@@ -26,7 +26,7 @@ const Main = () => {
     try {
       if (cityName !== "") {
         fetch(
-          `http://api.weatherapi.com/v1/current.json?key=${api_key}&q=${cityName}`
+          `https://weatherly-app-server.onrender.com/api/weather/${cityName}`
         )
           .then((res) => res.json())
           .then((res) => {
@@ -35,7 +35,6 @@ const Main = () => {
           });
         document.body.style.backgroundImage =
           "url('https://picsum.photos/seed/" + cityName + "/1600/900')";
-        document.title = `Weather in - ${location?.name}`;
       }
     } catch (error) {
       console.log("Error : ", error);
@@ -65,16 +64,16 @@ const Main = () => {
         </div>
         {info ? (
           <div className="weather loading pl-3">
-            <h2 className="text-4xl mt-6  ">
-              Weather in{" "}
-              <span className="text-sky-800 font-serif font-semibold">
+            <div className="text-4xl mt-6  ">
+              <div>Weather in </div>
+              <div className="text-sky-800 font-serif font-semibold">
                 {location?.name}
-              </span>
-            </h2>
+              </div>
+            </div>
             <span className="text-xl">
               {location.region}, {location.country}
             </span>
-            <h1 className="text-7xl mt-5 md:mb-5">{info?.temp_c}°C</h1>
+            <h1 className="text-6xl mt-4 ">{info?.temp_c}°C</h1>
             <div className="flex">
               <img
                 src={`https:${info?.condition?.icon}`}
@@ -85,7 +84,7 @@ const Main = () => {
                 {info?.condition?.text}
               </div>
             </div>
-            <div className=" md:mt-14 flex justify-between pl-2 pr-2">
+            <div className=" md:mt-2 flex justify-between pl-2 pr-2">
               <div>
                 <ul className="text-[17px]">
                   <li>Date </li>
