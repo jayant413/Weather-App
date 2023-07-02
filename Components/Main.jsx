@@ -3,7 +3,6 @@ import { AiOutlineSearch } from "react-icons/ai";
 import { TbTemperature } from "react-icons/tb";
 import WeatherFeed from "./weatherFeed";
 import hrt from "human-readable-time";
-const api_key = "83eaf893777c44e482d42521232706";
 
 const Main = () => {
   const [session, setSession] = useState("AM");
